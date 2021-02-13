@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQ5-aK-aBJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Tab Controller-->
+        <scene sceneID="rOl-dH-05r">
+            <objects>
+                <tabBarController id="yQ5-aK-aBJ" customClass="CustomTabController" customModule="Coding_Challenge_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PMD-AJ-S0X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qL2-kJ-Tn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1601" y="41"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Coding_Challenge_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2D-zI-T0e" customClass="MainLabelView" customModule="Coding_Challenge_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KRF-nr-rG0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VN-zF-Hny" customClass="ImagesCollectionView" customModule="Coding_Challenge_App" customModuleProvider="target">
+                                <rect key="frame" x="10" y="106" width="394" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9VN-zF-Hny" secondAttribute="bottom" id="00n-hu-aPT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9VN-zF-Hny" secondAttribute="trailing" constant="10" id="LdF-vg-P9j"/>
+                            <constraint firstItem="9VN-zF-Hny" firstAttribute="top" secondItem="s2D-zI-T0e" secondAttribute="bottom" constant="18" id="PVd-k0-TAj"/>
+                            <constraint firstItem="s2D-zI-T0e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qqt-8r-xWd"/>
+                            <constraint firstItem="s2D-zI-T0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UXY-ig-zqj"/>
+                            <constraint firstItem="s2D-zI-T0e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bmd-7H-U0C"/>
+                            <constraint firstItem="9VN-zF-Hny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dny-Zb-Qk2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageCollectionView" destination="9VN-zF-Hny" id="cTV-52-yXf"/>
+                        <outlet property="mainLabelView" destination="s2D-zI-T0e" id="qb4-OC-Q0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="5gT-vD-efH" customClass="HomeModuleInitializer" customModule="Coding_Challenge_App" customModuleProvider="target">
+                    <connections>
+                        <outlet property="homeViewController" destination="BYZ-38-t0r" id="Lhb-bt-BrY"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-486.95652173913049" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

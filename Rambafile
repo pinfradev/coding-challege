@@ -1,0 +1,17 @@
+### Headers settings
+company: pinfradev
+
+### Xcode project settings
+project_name: Coding Challenge App
+xcodeproj_path: Coding Challenge App.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: Coding Challenge App
+
+# The file path for new modules
+project_file_path: /Coding Challenge App/Modules/Home/
+
+### Templates
+templates:
+- {name: swifty_viper}

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Coding Challenge App
+
+  Created by Fray Pineda on 12/2/21.
+  
+*/
+
+"Alerts.acept" = "Aceptar";
+"Home.main_title" = "Imagenes";
