@@ -108,6 +108,10 @@ class ImageDetailViewController: UIViewController, ImageDetailViewInput {
     
 
     @IBAction func didTapAddToFavBtn() {
-        
+        guard var currentPhoto = self.currentPhoto else {
+            return
+        }
+        currentPhoto.imageData = self.imageData
+        self.output.saveLocalPhoto(photo: currentPhoto)
     }
 }

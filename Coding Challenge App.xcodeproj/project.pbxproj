@@ -68,6 +68,8 @@
 		AB82C17525D87DB200E57E0F /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB82C17025D87B6200E57E0F /* Roboto-Medium.ttf */; };
 		AB82C17925D87DB400E57E0F /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB82C17125D87B7D00E57E0F /* Roboto-Regular.ttf */; };
 		AB82C17E25D87E1900E57E0F /* UIButton+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82C17D25D87E1900E57E0F /* UIButton+extensions.swift */; };
+		AB82C1B525D88D4B00E57E0F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82C1B425D88D4B00E57E0F /* CoreDataManager.swift */; };
+		AB82C1BA25D88E7F00E57E0F /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82C1B925D88E7F00E57E0F /* LocalDataManager.swift */; };
 		B1D821471275C3822A082C93 /* ImageDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A192E6BFE8698176DBE865 /* ImageDetailViewInput.swift */; };
 		C3CF93F2D69F3052C093AFAF /* Pods_Coding_Challenge_App_Coding_Challenge_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEC6446338A1A4A4D5A6FCC /* Pods_Coding_Challenge_App_Coding_Challenge_AppUITests.framework */; };
 		CAAE97E865FACD25F0D4BEFF /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117130546BCC528CBAEF0FEA /* ImageDetailViewController.swift */; };
@@ -162,6 +164,8 @@
 		AB82C17025D87B6200E57E0F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../../../../Downloads/Roboto (1)/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		AB82C17125D87B7D00E57E0F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		AB82C17D25D87E1900E57E0F /* UIButton+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extensions.swift"; sourceTree = "<group>"; };
+		AB82C1B425D88D4B00E57E0F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		AB82C1B925D88E7F00E57E0F /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		B2E7D2014C431B029A4D36E8 /* Pods_Coding_Challenge_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEB910ABF5D26ADF0F9CB4D /* ImageDetailInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailInteractorOutput.swift; sourceTree = "<group>"; };
 		CBEC6446338A1A4A4D5A6FCC /* Pods_Coding_Challenge_App_Coding_Challenge_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge_App_Coding_Challenge_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,13 +393,13 @@
 			children = (
 				F53B7873800678FF4CE68D0A /* ImageDetail */,
 				AB6ADE5125D715F3004B2A92 /* Contact */,
-				AB6ADE4225D71205004B2A92 /* General */,
 				AB6ADE2F25D70E39004B2A92 /* VCFactory.swift */,
 				AB6ADE3825D71096004B2A92 /* CustomNavigationController.swift */,
 				AB6ADE2A25D70DDF004B2A92 /* CustomTabController.swift */,
 				AB6ADE2525D70DC0004B2A92 /* AppManager.swift */,
 				AB6ADDD725D70930004B2A92 /* Favorites */,
 				AB6ADDD625D70929004B2A92 /* Home */,
+				AB82C1B925D88E7F00E57E0F /* LocalDataManager.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -457,15 +461,9 @@
 				AB6ADE2025D70D5C004B2A92 /* VerticalPaginationManager.swift */,
 				AB1534F125D802E100F60096 /* BaseViewController.swift */,
 				AB15350C25D818E100F60096 /* Constants.swift */,
+				AB82C1B425D88D4B00E57E0F /* CoreDataManager.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		AB6ADE4225D71205004B2A92 /* General */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = General;
 			sourceTree = "<group>";
 		};
 		AB6ADE5125D715F3004B2A92 /* Contact */ = {
@@ -823,6 +821,7 @@
 				AB6ADE7825D7191F004B2A92 /* ImageResource.swift in Sources */,
 				AB6ADE2B25D70DDF004B2A92 /* CustomTabController.swift in Sources */,
 				AB1534F225D802E100F60096 /* BaseViewController.swift in Sources */,
+				AB82C1BA25D88E7F00E57E0F /* LocalDataManager.swift in Sources */,
 				AB82C17E25D87E1900E57E0F /* UIButton+extensions.swift in Sources */,
 				AB15352B25D82B0F00F60096 /* PhotoCollectionViewCell.swift in Sources */,
 				AB6ADE5825D716A9004B2A92 /* ContactViewController.swift in Sources */,
@@ -839,6 +838,7 @@
 				AB6ADD9F25D708AB004B2A92 /* SceneDelegate.swift in Sources */,
 				AB15352425D8286E00F60096 /* ImagesCollectionView.swift in Sources */,
 				AB6ADE2625D70DC0004B2A92 /* AppManager.swift in Sources */,
+				AB82C1B525D88D4B00E57E0F /* CoreDataManager.swift in Sources */,
 				AB15351925D81BA800F60096 /* MainLabelView.swift in Sources */,
 				AB6ADE2125D70D5C004B2A92 /* VerticalPaginationManager.swift in Sources */,
 				AB6ADEB025D728F1004B2A92 /* User.swift in Sources */,

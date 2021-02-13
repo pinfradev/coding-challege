@@ -7,12 +7,18 @@
 //
 
 class ImageDetailPresenter: ImageDetailModuleInput, ImageDetailViewOutput, ImageDetailInteractorOutput {
+    
 
     weak var view: ImageDetailViewInput!
     var interactor: ImageDetailInteractorInput!
     var router: ImageDetailRouterInput!
 
+    //MARK: - ImageDetailViewOutput
     func viewIsReady() {
         self.view.showImageInformation()
+    }
+    
+    func saveLocalPhoto(photo: PhotoModel) {
+        
     }
 }

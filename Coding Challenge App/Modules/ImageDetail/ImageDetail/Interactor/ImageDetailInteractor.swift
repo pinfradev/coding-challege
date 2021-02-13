@@ -7,7 +7,14 @@
 //
 
 class ImageDetailInteractor: ImageDetailInteractorInput {
+    
 
     weak var output: ImageDetailInteractorOutput!
 
+    var localDataManager: LocalDataManager = LocalDataManager()
+    
+    //MARK: ImageDetailInteractorInput
+    func saveLocalPhoto(photo: PhotoModel) {
+        localDataManager.saveLocalPhoto(photo: photo)
+    }
 }
