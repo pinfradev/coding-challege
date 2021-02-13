@@ -5,6 +5,14 @@
   Created by Fray Pineda on 12/2/21.
   
 */
+//MARK: Alerts
+"Alerts.acept" = "Accept";
+//MARK: Home
+"Home.main_title" = "Images";
+//MARK: DetailImage
 
-"Alerts.acept" = "Aceptar";
-"Home.main_title" = "Imagenes";
+"ImageDetail.mainTitle" = "Image detail";
+"ImageDetail.imageIdTitle" = "image Id";
+"ImageDetail.userNameTitle" = "User Name";
+"ImageDetail.bioTitle" = "biography";
+"ImageDetail.mainButtonTitle" = "add to favorites";

@@ -15,4 +15,5 @@ protocol HomeInteractorInput {
     var size: Int {get}
     //MARK: Functions
     func getImages()
+    func getMoreImages()
 }

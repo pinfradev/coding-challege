@@ -13,4 +13,5 @@ struct PhotoModel {
     let userName: String
     let userId: String?
     let userBio: String?
+    var imageData: Data?
 }

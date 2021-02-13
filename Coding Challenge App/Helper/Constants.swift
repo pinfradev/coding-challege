@@ -23,11 +23,19 @@ struct Constants {
     struct Strings {
         
         struct Alerts {
-            static var accept = NSLocalizedString("Alerts.acept", comment: "")
+            static let accept = NSLocalizedString("Alerts.acept", comment: "")
         }
         
         struct Home {
-            static var mainTitle = NSLocalizedString("Home.main_title", comment: "")
+            static let mainTitle = NSLocalizedString("Home.main_title", comment: "")
+        }
+        
+        struct ImageDetail {
+            static let mainTitle = NSLocalizedString("ImageDetail.mainTitle", comment: "")
+            static let ImageIdTitle = NSLocalizedString("ImageDetail.imageIdTitle", comment: "")
+            static let userNameTitle = NSLocalizedString("ImageDetail.userNameTitle", comment: "")
+            static let bioTitle = NSLocalizedString("ImageDetail.bioTitle", comment: "")
+            static let mainButtonTitle = NSLocalizedString("ImageDetail.mainButtonTitle", comment: "")
         }
     }
     
@@ -41,7 +49,8 @@ struct Fonts {
         switch type {
         case .roboto:
             return UIFont(name: "\(type.rawValue)-\(weight.rawValue)",
-                          size: size) ?? UIFont()
+                          size: size) ?? .systemFont(ofSize: size)
+            
         }
     }
 }

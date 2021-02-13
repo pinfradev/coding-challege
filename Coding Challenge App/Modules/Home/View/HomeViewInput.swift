@@ -15,4 +15,8 @@ protocol HomeViewInput: class {
     func showImages(data: [PhotoModel])
     
     func showError(error: String)
+
+    func setupPagination()
+    
+    func showMoreImages(data: [PhotoModel])
 }

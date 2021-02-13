@@ -9,6 +9,9 @@ target 'Coding Challenge App' do
 # Networking
   pod 'Alamofire', '~> 5.2.2'
 
+#images
+  pod 'Kingfisher', '~> 6.0'
+
   target 'Coding Challenge AppTests' do
     inherit! :search_paths
     # Pods for testing
