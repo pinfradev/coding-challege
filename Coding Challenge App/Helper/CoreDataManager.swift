@@ -32,6 +32,17 @@ class CoreDataManager {
         appDelegate.saveContext()
     }
     
+    func getPhotos() -> [Photo] {
+        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+        do {
+            let result = try self.context.fetch(fetchRequest)
+            return result
+        } catch {
+            print("error getting current Photos")
+        }
+        return []
+    }
+    
     
 }
 

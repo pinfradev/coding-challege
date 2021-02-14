@@ -36,6 +36,11 @@ struct Constants {
             static let userNameTitle = NSLocalizedString("ImageDetail.userNameTitle", comment: "")
             static let bioTitle = NSLocalizedString("ImageDetail.bioTitle", comment: "")
             static let mainButtonTitle = NSLocalizedString("ImageDetail.mainButtonTitle", comment: "")
+            static let mainButtonTitleFromFavs = NSLocalizedString("ImageDetail.mainButtonTitleFromFavs", comment: "")
+        }
+        
+        struct Favorite {
+            static let mainTitle = NSLocalizedString("Favorite.mainTitle", comment: "")
         }
     }
     

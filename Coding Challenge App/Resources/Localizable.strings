@@ -16,3 +16,5 @@
 "ImageDetail.userNameTitle" = "User Name";
 "ImageDetail.bioTitle" = "biography";
 "ImageDetail.mainButtonTitle" = "add to favorites";
+"Favorite.mainTitle" = "Favorites";
+"ImageDetail.mainButtonTitleFromFavs" = "Delete from Favorites";

@@ -14,4 +14,19 @@ class LocalDataManager {
     func saveLocalPhoto(photo: PhotoModel) {
         manager.savePhoto(photo: photo)
     }
+    
+    func getLocalPhotos() -> [PhotoModel] {
+        var photoModelArray = [PhotoModel]()
+        let photos = manager.getPhotos()
+        for photo in photos {
+            let currentPhoto = PhotoModel(url: photo.url ?? "",
+                                          id: photo.id ?? "",
+                                          userName: photo.user_name ?? "",
+                                          userId: photo.user_id,
+                                          userBio: photo.biography,
+                                          imageData: photo.data)
+            photoModelArray.append(currentPhoto)
+        }
+        return photoModelArray
+    }
 }

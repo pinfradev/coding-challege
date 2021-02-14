@@ -5,7 +5,6 @@
 //  Created by david on 13/02/2021.
 //  Copyright © 2021 pinfradev. All rights reserved.
 //
-
 class ImageDetailPresenter: ImageDetailModuleInput, ImageDetailViewOutput, ImageDetailInteractorOutput {
     
 
@@ -19,6 +18,6 @@ class ImageDetailPresenter: ImageDetailModuleInput, ImageDetailViewOutput, Image
     }
     
     func saveLocalPhoto(photo: PhotoModel) {
-        
+        self.interactor.saveLocalPhoto(photo: photo)
     }
 }

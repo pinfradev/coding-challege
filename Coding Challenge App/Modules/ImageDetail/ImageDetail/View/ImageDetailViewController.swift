@@ -9,8 +9,13 @@
 import UIKit
 import Kingfisher
 
+enum DetailImagePreviusVC {
+    case favorites
+    case home
+}
+
 class ImageDetailViewController: UIViewController, ImageDetailViewInput {
-    
+
     //IBOutlets
     @IBOutlet weak var imageView: UIImageView!
     
@@ -64,7 +69,14 @@ class ImageDetailViewController: UIViewController, ImageDetailViewInput {
     }
     @IBOutlet weak var mainButton: UIButton! {
         didSet {
-            mainButton.setAttributedTitleWith(text: Constants.Strings.ImageDetail.mainButtonTitle,
+            var text = ""
+            switch self.previousVC {
+            case .home:
+                text = Constants.Strings.ImageDetail.mainButtonTitle
+            case .favorites:
+                text = Constants.Strings.ImageDetail.mainButtonTitleFromFavs
+            }
+            mainButton.setAttributedTitleWith(text: text,
                                               fontType: .roboto,
                                               weight: .bold,
                                               size: 13.0)
@@ -86,7 +98,7 @@ class ImageDetailViewController: UIViewController, ImageDetailViewInput {
     var output: ImageDetailViewOutput!
     var currentPhoto: PhotoModel?
     var imageData: Data?
-
+    var previousVC: DetailImagePreviusVC = .home
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -103,7 +115,6 @@ class ImageDetailViewController: UIViewController, ImageDetailViewInput {
             self.imageView.image = image
         }
     }
-    
     //MARK: IBActions
     
 
@@ -112,6 +123,16 @@ class ImageDetailViewController: UIViewController, ImageDetailViewInput {
             return
         }
         currentPhoto.imageData = self.imageData
-        self.output.saveLocalPhoto(photo: currentPhoto)
+        self.actionForMainButton(currentPhoto: currentPhoto)
+    }
+    
+    //private functions
+    private func actionForMainButton(currentPhoto: PhotoModel) {
+        switch self.previousVC {
+        case .home:
+            self.output.saveLocalPhoto(photo: currentPhoto)
+        case .favorites:
+            break
+        }
     }
 }
