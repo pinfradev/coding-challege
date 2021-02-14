@@ -11,6 +11,8 @@ target 'Coding Challenge App' do
 
 #images
   pod 'Kingfisher', '~> 6.0'
+#validation
+pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
 
   target 'Coding Challenge AppTests' do
     inherit! :search_paths

@@ -92,6 +92,7 @@
 		AB82C1B525D88D4B00E57E0F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82C1B425D88D4B00E57E0F /* CoreDataManager.swift */; };
 		AB82C1BA25D88E7F00E57E0F /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB82C1B925D88E7F00E57E0F /* LocalDataManager.swift */; };
 		AB8F498A25D97F9E002FF9E8 /* ContactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F498925D97F9E002FF9E8 /* ContactResponse.swift */; };
+		AB8F499925D99EE6002FF9E8 /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F499825D99EE6002FF9E8 /* DateTextField.swift */; };
 		B1D821471275C3822A082C93 /* ImageDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A192E6BFE8698176DBE865 /* ImageDetailViewInput.swift */; };
 		C3CF93F2D69F3052C093AFAF /* Pods_Coding_Challenge_App_Coding_Challenge_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEC6446338A1A4A4D5A6FCC /* Pods_Coding_Challenge_App_Coding_Challenge_AppUITests.framework */; };
 		CAAE97E865FACD25F0D4BEFF /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117130546BCC528CBAEF0FEA /* ImageDetailViewController.swift */; };
@@ -212,6 +213,7 @@
 		AB82C1B425D88D4B00E57E0F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		AB82C1B925D88E7F00E57E0F /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		AB8F498925D97F9E002FF9E8 /* ContactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactResponse.swift; sourceTree = "<group>"; };
+		AB8F499825D99EE6002FF9E8 /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
 		B2E7D2014C431B029A4D36E8 /* Pods_Coding_Challenge_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEB910ABF5D26ADF0F9CB4D /* ImageDetailInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailInteractorOutput.swift; sourceTree = "<group>"; };
 		CBEC6446338A1A4A4D5A6FCC /* Pods_Coding_Challenge_App_Coding_Challenge_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coding_Challenge_App_Coding_Challenge_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -459,6 +461,7 @@
 		AB15351125D81B4C00F60096 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				AB8F499725D99EC3002FF9E8 /* DateTextField */,
 				AB15351D25D8283600F60096 /* ImagesCollectionView */,
 				AB15351225D81B5700F60096 /* MainLabelView */,
 			);
@@ -689,6 +692,14 @@
 				AB8F498925D97F9E002FF9E8 /* ContactResponse.swift */,
 			);
 			path = ContactResponse;
+			sourceTree = "<group>";
+		};
+		AB8F499725D99EC3002FF9E8 /* DateTextField */ = {
+			isa = PBXGroup;
+			children = (
+				AB8F499825D99EE6002FF9E8 /* DateTextField.swift */,
+			);
+			path = DateTextField;
 			sourceTree = "<group>";
 		};
 		B790F8A19AF4974D940CED0D /* Pods */ = {
@@ -1072,6 +1083,7 @@
 				4E3370A2341338F4255A6EC6 /* FavoritesRouter.swift in Sources */,
 				E034C578BE292C2E86FA73D8 /* FavoritesConfigurator.swift in Sources */,
 				A97A48D3AFDEE7ACEEFEDD02 /* FavoritesInitializer.swift in Sources */,
+				AB8F499925D99EE6002FF9E8 /* DateTextField.swift in Sources */,
 				7D6F1D0C9B8CE8C0846DE6D1 /* ContactViewInput.swift in Sources */,
 				8E9CD9EDD3CDD3E471404FB3 /* ContactViewOutput.swift in Sources */,
 				6135604FABFEC0EB111CE65C /* ContactViewController.swift in Sources */,

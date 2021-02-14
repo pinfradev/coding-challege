@@ -13,6 +13,8 @@ class ContactViewController: BaseViewController, ContactViewInput {
 
     var output: ContactViewOutput!
 
+    //Properties
+        let datePicker = UIDatePicker()
     //IBOutlets
     @IBOutlet weak var mainLabelView: MainLabelView! {
         didSet {
@@ -27,8 +29,9 @@ class ContactViewController: BaseViewController, ContactViewInput {
     }
     
     
-    @IBOutlet weak var birthDateTextField: UITextField!{
+    @IBOutlet weak var birthDateTextField: DateTextField!{
         didSet {
+            self.setupDatePicker()
             birthDateTextField.placeholder = Constants.Strings.Contact.datePlaceholder
         }
     }
@@ -80,6 +83,14 @@ class ContactViewController: BaseViewController, ContactViewInput {
     func hideLoader() {
         self.hideBasicLoader()
     }
+    
+    //MARK:- private funcs
+    private func setupDatePicker() {
+        
+        self.birthDateTextField.setupDateTextField()
+    }
+    
+
     
     //MARK: IBActions
     @IBAction func didTapSendMessageBtn() {
