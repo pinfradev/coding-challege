@@ -28,6 +28,7 @@ struct Constants {
             static let localSaveError = NSLocalizedString("Alerts.localSaveError", comment: "")
             static let localDeleteError = NSLocalizedString("Alerts.localDeleteError", comment: "")
             static let errorImageExists = NSLocalizedString("Alerts.ErrorFavoriteExists", comment: "")
+            static let sentMessage = NSLocalizedString("Alerts.sentMessage", comment: "")
             
         }
         
@@ -46,6 +47,15 @@ struct Constants {
         
         struct Favorite {
             static let mainTitle = NSLocalizedString("Favorite.mainTitle", comment: "")
+        }
+        
+        struct Contact {
+            static let mainTitle = NSLocalizedString("Contact.mainTitle", comment: "")
+            static let namePlaceholder = NSLocalizedString("Contact.namePlaceholder", comment: "")
+            static let datePlaceholder = NSLocalizedString("Contact.datePlaceholder", comment: "")
+            static let emailPlaceholder = NSLocalizedString("Contact.emailPlaceholder", comment: "")
+            static let messageTitle = NSLocalizedString("Contact.messageTitle", comment: "")
+            static let mainBtnTitle = NSLocalizedString("Contact.mainBtnTitle", comment: "")
         }
     }
     

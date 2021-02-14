@@ -7,6 +7,11 @@
 */
 //MARK: Alerts
 "Alerts.acept" = "Accept";
+"Alerts.localSaveError" = "Error when saving";
+"Alerts.localDeleteError" = "Error when deleting";
+"Alerts.ErrorFavoriteExists" = "The images is already favorite";
+"Alerts.errorTitle" = "Error";
+"Alerts.sentMessage" = "message sent successfully";
 //MARK: Home
 "Home.main_title" = "Images";
 //MARK: DetailImage
@@ -16,9 +21,16 @@
 "ImageDetail.userNameTitle" = "User Name";
 "ImageDetail.bioTitle" = "biography";
 "ImageDetail.mainButtonTitle" = "add to favorites";
-"Favorite.mainTitle" = "Favorites";
 "ImageDetail.mainButtonTitleFromFavs" = "Delete from Favorites";
-"Alerts.localSaveError" = "Error when saving";
-"Alerts.localDeleteError" = "Error when deleting";
-"Alerts.ErrorFavoriteExists" = "The images is already favorite";
-"Alerts.errorTitle" = "Error";
+
+//MARK: Favorite
+"Favorite.mainTitle" = "Favorites";
+
+//MARK: Contact
+
+"Contact.mainTitle" = "Contact";
+"Contact.namePlaceholder" = "complete name";
+"Contact.datePlaceholder" = "birthdate";
+"Contact.emailPlaceholder" = "email";
+"Contact.messageTitle" = "message";
+"Contact.mainBtnTitle" = "Send";
