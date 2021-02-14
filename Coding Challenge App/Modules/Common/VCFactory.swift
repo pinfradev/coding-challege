@@ -35,9 +35,11 @@ class VCFactory: NSObject {
                 let nav = CustomNavigationController(rootViewController: viewCtrl)
                 viewController = nav
             case .imageDetail:
-                break
+                let viewCtrl = self.instantiateVC(id: "\(ImageDetailViewController.self)",
+                                                  storyBoard: .imageDetail)
+                viewController = viewCtrl
             case .favorites:
-                let viewCtrl = self.instantiateVC(id: "\(FavoriteViewController.self)", storyBoard: .favorite)
+                let viewCtrl = self.instantiateVC(id: "\(FavoritesViewController.self)", storyBoard: .favorite)
                 let nav = CustomNavigationController(rootViewController: viewCtrl)
                 viewController = nav
                 break

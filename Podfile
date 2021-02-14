@@ -9,6 +9,14 @@ target 'Coding Challenge App' do
 # Networking
   pod 'Alamofire', '~> 5.2.2'
 
+#images
+  pod 'Kingfisher', '~> 6.0'
+#validation
+pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
+
+#keyboardManager
+pod 'IQKeyboardManagerSwift', '6.5.0'
+
   target 'Coding Challenge AppTests' do
     inherit! :search_paths
     # Pods for testing

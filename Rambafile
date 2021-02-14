@@ -10,7 +10,7 @@ xcodeproj_path: Coding Challenge App.xcodeproj
 project_target: Coding Challenge App
 
 # The file path for new modules
-project_file_path: /Coding Challenge App/Modules/Home/
+project_file_path: /Coding Challenge App/Modules/
 
 ### Templates
 templates:

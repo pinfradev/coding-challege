@@ -11,7 +11,6 @@ import UIKit
 protocol VerticalPaginationManagerDelegate: class {
     func refreshAll(completion: @escaping (Bool) -> Void)
     func loadMore(completion: @escaping (Bool) -> Void)
-    func loadCauseFew(completion: @escaping (Bool) -> Void)
 }
 
 class VerticalPaginationManager: NSObject {
@@ -128,30 +127,21 @@ extension VerticalPaginationManager {
     
     private func setContentOffSet(_ offset: CGPoint) {
             let offsetY = offset.y
-           if offsetY < -100 && !self.isLoading {
-            self.scrollView.isScrollEnabled = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                self.scrollView.isScrollEnabled = true
-            }
-               self.isLoading = true
-               self.delegate?.refreshAll { success in
-                   self.isLoading = false
-               }
-               return
-           }
            
            let contentHeight = self.scrollView.contentSize.height
            let frameHeight = self.scrollView.bounds.size.height
            let diffY = contentHeight - frameHeight
            if contentHeight > frameHeight,
-            offsetY > (diffY + 130) && !self.isLoading {
+            offsetY > (diffY + 60) && !self.isLoading {
+            self.scrollView.setContentOffset(CGPoint(x: 0.0, y: diffY), animated: false)
             self.scrollView.isScrollEnabled = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                self.scrollView.isScrollEnabled = true
-                   self.isLoading = true
-                   self.delegate?.loadMore { success in
-                       self.isLoading = false
-                    self.loadedCauseFew = false
+            self.isLoading = true
+                   
+                self.delegate?.loadMore { success in
+                    self.isLoading = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                        self.scrollView.isScrollEnabled = true
+                       
                    }
                }
            } 

@@ -18,6 +18,7 @@ enum HttpMethod: String {
 
 enum RequestParameter {
         case none
+    case json(parameters: Parameters)
 }
 
 protocol RequestType {

@@ -32,11 +32,10 @@ class MainLabelView: UIView {
     }
     
     func setupLabelText(with text: String) {
-        let attributedText = NSAttributedString(string: text,
-                                                attributes: [NSAttributedString.Key.font: Fonts.getFont(type: .roboto,
-                                                                                                        weight: .bold,
-                                                                                                        size: 15.0)])
-        self.label.attributedText = attributedText
-        self.label.sizeToFit()
+        self.label.setTextWith(string: text,
+                               font: .roboto,
+                               weight: .bold,
+                               size: 15.0,
+                               sizeToFit: true)
     }
 }

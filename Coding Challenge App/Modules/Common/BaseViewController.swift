@@ -9,23 +9,21 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    var loader: UIActivityIndicatorView {
-        let loader = UIActivityIndicatorView(frame: self.view.bounds)
-        loader.hidesWhenStopped = true
-        loader.stopAnimating()
-        loader.style = .large
-        loader.tintColor = .blue
-        return loader
-    }
+    private let loader: UIActivityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loader.frame = self.view.frame
+        loader.hidesWhenStopped = true
+        loader.stopAnimating()
+        loader.style = .large
     }
 
     func showBasicLoader() {
+        self.loader.isHidden = false
+        self.loader.startAnimating()
         self.view.addSubview(loader)
         view.bringSubviewToFront(loader)
-        self.loader.startAnimating()
     }
     
     func hideBasicLoader() {
@@ -38,6 +36,11 @@ class BaseViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func dismissViewController() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 
 }

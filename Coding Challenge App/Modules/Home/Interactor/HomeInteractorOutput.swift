@@ -13,4 +13,7 @@ protocol HomeInteractorOutput: class {
     func getImagesSucceded(data: [PhotoModel])
     func getImagesFailed(error: String)
     
+    func getMoreImagesSucceded(data: [PhotoModel])
+    func getMoreImagesFailed(error: String)
+    
 }

@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeRouterInput {
-
+    func goToImageDetail(object: PhotoModel,
+                         from viewController: HomeViewInput,
+                         imageData: Data?)
 }

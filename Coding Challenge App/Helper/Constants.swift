@@ -23,11 +23,39 @@ struct Constants {
     struct Strings {
         
         struct Alerts {
-            static var accept = NSLocalizedString("Alerts.acept", comment: "")
+            static let accept = NSLocalizedString("Alerts.acept", comment: "")
+            static let errorTitle = NSLocalizedString("Alerts.errorTitle", comment: "")
+            static let localSaveError = NSLocalizedString("Alerts.localSaveError", comment: "")
+            static let localDeleteError = NSLocalizedString("Alerts.localDeleteError", comment: "")
+            static let errorImageExists = NSLocalizedString("Alerts.ErrorFavoriteExists", comment: "")
+            static let sentMessage = NSLocalizedString("Alerts.sentMessage", comment: "")
+            
         }
         
         struct Home {
-            static var mainTitle = NSLocalizedString("Home.main_title", comment: "")
+            static let mainTitle = NSLocalizedString("Home.main_title", comment: "")
+        }
+        
+        struct ImageDetail {
+            static let mainTitle = NSLocalizedString("ImageDetail.mainTitle", comment: "")
+            static let ImageIdTitle = NSLocalizedString("ImageDetail.imageIdTitle", comment: "")
+            static let userNameTitle = NSLocalizedString("ImageDetail.userNameTitle", comment: "")
+            static let bioTitle = NSLocalizedString("ImageDetail.bioTitle", comment: "")
+            static let mainButtonTitle = NSLocalizedString("ImageDetail.mainButtonTitle", comment: "")
+            static let mainButtonTitleFromFavs = NSLocalizedString("ImageDetail.mainButtonTitleFromFavs", comment: "")
+        }
+        
+        struct Favorite {
+            static let mainTitle = NSLocalizedString("Favorite.mainTitle", comment: "")
+        }
+        
+        struct Contact {
+            static let mainTitle = NSLocalizedString("Contact.mainTitle", comment: "")
+            static let namePlaceholder = NSLocalizedString("Contact.namePlaceholder", comment: "")
+            static let datePlaceholder = NSLocalizedString("Contact.datePlaceholder", comment: "")
+            static let emailPlaceholder = NSLocalizedString("Contact.emailPlaceholder", comment: "")
+            static let messageTitle = NSLocalizedString("Contact.messageTitle", comment: "")
+            static let mainBtnTitle = NSLocalizedString("Contact.mainBtnTitle", comment: "")
         }
     }
     
@@ -41,7 +69,8 @@ struct Fonts {
         switch type {
         case .roboto:
             return UIFont(name: "\(type.rawValue)-\(weight.rawValue)",
-                          size: size) ?? UIFont()
+                          size: size) ?? .systemFont(ofSize: size)
+            
         }
     }
 }

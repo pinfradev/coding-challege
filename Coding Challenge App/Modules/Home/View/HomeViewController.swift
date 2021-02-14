@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeViewController: BaseViewController, HomeViewInput {
+    
     // MARK: - IBOutlets
 
     @IBOutlet weak var mainLabelView: MainLabelView! {
@@ -17,11 +18,16 @@ class HomeViewController: BaseViewController, HomeViewInput {
         }
     }
 
-    @IBOutlet weak var imageCollectionView: ImagesCollectionView!
+    @IBOutlet weak var imageCollectionView: ImagesCollectionView! {
+        didSet {
+            self.imageCollectionView.delegate = self
+        }
+    }
     
     //MARK:- Properties
     var output: HomeViewOutput!
-
+    var paginationManager: VerticalPaginationManager?
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +36,7 @@ class HomeViewController: BaseViewController, HomeViewInput {
     
     //MARK: HomeViewInput methods
     func showImages(data: [PhotoModel]) {
-        print(data)
+        self.imageCollectionView.reloadCollection(with: data)
     }
     
     func showError(error: String) {
@@ -45,7 +51,36 @@ class HomeViewController: BaseViewController, HomeViewInput {
         self.hideBasicLoader()
     }
     
+    func setupPagination() {
+        self.paginationManager = VerticalPaginationManager(scrollView: self.imageCollectionView.collectionView)
+        self.paginationManager?.delegate = self
+    }
     
+    func showMoreImages(data: [PhotoModel]) {
+        self.imageCollectionView.loadMoreItems(items: data)
+    }
+ 
+}
+
+extension HomeViewController: ImageCollectionDelegate {
+    func didselect(item: PhotoModel, imageData: Data?) {
+        self.output.goToImageDetail(object: item, imageData: imageData)
+        self.paginationManager?.delegate = self
+    }
+
+}
+
+extension HomeViewController: VerticalPaginationManagerDelegate {
+    
+    func refreshAll(completion: @escaping (Bool) -> Void) {
+        self.output.getImages()
+        completion(true)
+    }
+    
+    func loadMore(completion: @escaping (Bool) -> Void) {
+        self.output.getMoreImages()
+        completion(true)
+    }
     
     
 }

@@ -18,11 +18,11 @@ class APIBasis<T: RequestType> {
         let headers = requestType.headers
         let parameters = self.getParameters(for: requestType.parameters)
         let url = requestType.basicUrl + requestType.path
-        
+        let encoding = self.getEncoding(for: requestType.parameters)
         AF.request(url,
                    method: method,
                    parameters: parameters,
-                   encoding: URLEncoding.default,
+                   encoding: encoding,
                    headers: headers).responseJSON { (response) in
                         self.sendRequestResult(requestType: requestType,
                         response: response,
@@ -79,6 +79,17 @@ class APIBasis<T: RequestType> {
         switch type {
         case .none:
             return [:]
+        case .json(let parameters):
+            return parameters
+        }
+    }
+    
+    private func getEncoding(for type: RequestParameter) -> ParameterEncoding {
+        switch type {
+        case .none:
+            return URLEncoding.default
+        case .json:
+            return JSONEncoding.default
         }
     }
 }
