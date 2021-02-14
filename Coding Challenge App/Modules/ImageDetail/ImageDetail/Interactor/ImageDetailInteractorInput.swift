@@ -12,5 +12,5 @@ protocol ImageDetailInteractorInput {
 
     var localDataManager: LocalDataManager {get}
     func saveLocalPhoto(photo: PhotoModel)
-    
+    func deleteLocalPhotoWith(id: String)
 }

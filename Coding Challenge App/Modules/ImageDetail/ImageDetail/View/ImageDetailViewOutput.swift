@@ -12,4 +12,6 @@ protocol ImageDetailViewOutput {
     func viewIsReady()
     
     func saveLocalPhoto(photo: PhotoModel)
+    
+    func deleteLocalPhotoWith(id: String)
 }

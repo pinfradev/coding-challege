@@ -9,8 +9,8 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    var loader: UIActivityIndicatorView {
-        let loader = UIActivityIndicatorView(frame: self.view.bounds)
+    private var loader: UIActivityIndicatorView {
+        let loader = UIActivityIndicatorView(frame: self.view.frame)
         loader.hidesWhenStopped = true
         loader.stopAnimating()
         loader.style = .large
@@ -23,9 +23,10 @@ class BaseViewController: UIViewController {
     }
 
     func showBasicLoader() {
+        self.loader.isHidden = false
+        self.loader.startAnimating()
         self.view.addSubview(loader)
         view.bringSubviewToFront(loader)
-        self.loader.startAnimating()
     }
     
     func hideBasicLoader() {

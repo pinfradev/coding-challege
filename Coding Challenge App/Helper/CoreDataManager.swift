@@ -43,6 +43,20 @@ class CoreDataManager {
         return []
     }
     
+    func deletePhoto(id: String) {
+        guard let object = self.getObjectBy(id: id) else {
+            return
+        }
+        self.context.delete(object)
+    }
+    
+    private func getObjectBy(id: String) -> Photo? {
+        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+        let object = try? self.context.fetch(fetchRequest).first
+        return object
+    }
+    
     
 }
 

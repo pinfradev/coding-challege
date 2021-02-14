@@ -17,4 +17,8 @@ class ImageDetailInteractor: ImageDetailInteractorInput {
     func saveLocalPhoto(photo: PhotoModel) {
         localDataManager.saveLocalPhoto(photo: photo)
     }
+    
+    func deleteLocalPhotoWith(id: String) {
+        localDataManager.deleteLocalPhotoWith(id: id)
+    }
 }

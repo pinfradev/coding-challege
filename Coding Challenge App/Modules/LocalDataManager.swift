@@ -29,4 +29,8 @@ class LocalDataManager {
         }
         return photoModelArray
     }
+    
+    func deleteLocalPhotoWith(id: String) {
+        manager.deletePhoto(id: id)
+    }
 }

@@ -20,4 +20,8 @@ class ImageDetailPresenter: ImageDetailModuleInput, ImageDetailViewOutput, Image
     func saveLocalPhoto(photo: PhotoModel) {
         self.interactor.saveLocalPhoto(photo: photo)
     }
+    
+    func deleteLocalPhotoWith(id: String) {
+        self.interactor.deleteLocalPhotoWith(id: id)
+    }
 }

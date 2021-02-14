@@ -34,7 +34,9 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     
     //MARK: HomeInteractorOutput
     func getImagesSucceded(data: [PhotoModel]) {
-        self.view.hideLoader()
+        DispatchQueue.main.async {
+            self.view.hideLoader()
+        }
         self.view.showImages(data: data)
     }
     

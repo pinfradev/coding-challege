@@ -132,6 +132,7 @@ class ImageDetailViewController: UIViewController, ImageDetailViewInput {
         case .home:
             self.output.saveLocalPhoto(photo: currentPhoto)
         case .favorites:
+            self.output.deleteLocalPhotoWith(id: currentPhoto.id)
             break
         }
     }
