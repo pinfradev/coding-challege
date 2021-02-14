@@ -9,4 +9,5 @@
 protocol ImageDetailViewInput: class {
 
     func showImageInformation()
+
 }
