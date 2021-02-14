@@ -9,17 +9,14 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    private var loader: UIActivityIndicatorView {
-        let loader = UIActivityIndicatorView(frame: self.view.frame)
-        loader.hidesWhenStopped = true
-        loader.stopAnimating()
-        loader.style = .large
-        loader.tintColor = .blue
-        return loader
-    }
+    private let loader: UIActivityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loader.frame = self.view.frame
+        loader.hidesWhenStopped = true
+        loader.stopAnimating()
+        loader.style = .large
     }
 
     func showBasicLoader() {
