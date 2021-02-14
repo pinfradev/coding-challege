@@ -40,5 +40,9 @@ class BaseViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func dismissViewController() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
 }

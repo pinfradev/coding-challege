@@ -520,7 +520,6 @@
 			isa = PBXGroup;
 			children = (
 				AB6ADE2025D70D5C004B2A92 /* VerticalPaginationManager.swift */,
-				AB1534F125D802E100F60096 /* BaseViewController.swift */,
 				AB15350C25D818E100F60096 /* Constants.swift */,
 				AB82C1B425D88D4B00E57E0F /* CoreDataManager.swift */,
 			);
@@ -595,6 +594,7 @@
 		AB82C1C725D8966500E57E0F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AB1534F125D802E100F60096 /* BaseViewController.swift */,
 				AB6ADE2F25D70E39004B2A92 /* VCFactory.swift */,
 				AB6ADE3825D71096004B2A92 /* CustomNavigationController.swift */,
 				AB6ADE2A25D70DDF004B2A92 /* CustomTabController.swift */,

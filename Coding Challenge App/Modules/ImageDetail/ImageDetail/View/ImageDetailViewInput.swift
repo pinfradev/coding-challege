@@ -10,4 +10,7 @@ protocol ImageDetailViewInput: class {
 
     func showImageInformation()
 
+    func showMessage(title: String, message: String)
+    
+    func popViewController()
 }

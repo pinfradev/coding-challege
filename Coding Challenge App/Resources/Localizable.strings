@@ -18,3 +18,7 @@
 "ImageDetail.mainButtonTitle" = "add to favorites";
 "Favorite.mainTitle" = "Favorites";
 "ImageDetail.mainButtonTitleFromFavs" = "Delete from Favorites";
+"Alerts.localSaveError" = "Error when saving";
+"Alerts.localDeleteError" = "Error when deleting";
+"Alerts.ErrorFavoriteExists" = "The images is already favorite";
+"Alerts.errorTitle" = "Error";

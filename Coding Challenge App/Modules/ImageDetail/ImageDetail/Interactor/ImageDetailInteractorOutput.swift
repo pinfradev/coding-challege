@@ -10,4 +10,8 @@ import Foundation
 
 protocol ImageDetailInteractorOutput: class {
 
+    func localSaveSucceded()
+    func localSaveFailed(error: String?)
+    func localDeleteSucceded()
+    func localDeleteFailed()
 }

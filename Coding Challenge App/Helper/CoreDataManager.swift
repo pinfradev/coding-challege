@@ -17,9 +17,16 @@ class CoreDataManager {
         self.context = appDelegate.persistentContainer.viewContext
     }
     
-    func savePhoto(photo: PhotoModel) {
+    func savePhoto(photo: PhotoModel,
+                   successBlock: () -> Void,
+                   errorBlock: (_ error: String?) -> Void) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             print("error no appDelegate")
+            errorBlock(nil)
+            return
+        }
+        if let _ = self.getObjectBy(id: photo.id) {
+            errorBlock(Constants.Strings.Alerts.errorImageExists)
             return
         }
         let currentPhoto = Photo(context: self.context)
@@ -30,6 +37,7 @@ class CoreDataManager {
         currentPhoto.biography = photo.userBio
         currentPhoto.data = photo.imageData
         appDelegate.saveContext()
+        successBlock()
     }
     
     func getPhotos() -> [Photo] {
@@ -43,11 +51,13 @@ class CoreDataManager {
         return []
     }
     
-    func deletePhoto(id: String) {
+    func deletePhoto(id: String, successBlock: () -> Void, errorBlock: () -> Void) {
         guard let object = self.getObjectBy(id: id) else {
+            errorBlock()
             return
         }
         self.context.delete(object)
+        successBlock()
     }
     
     private func getObjectBy(id: String) -> Photo? {

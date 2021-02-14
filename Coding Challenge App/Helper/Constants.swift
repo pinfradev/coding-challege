@@ -24,6 +24,11 @@ struct Constants {
         
         struct Alerts {
             static let accept = NSLocalizedString("Alerts.acept", comment: "")
+            static let errorTitle = NSLocalizedString("Alerts.errorTitle", comment: "")
+            static let localSaveError = NSLocalizedString("Alerts.localSaveError", comment: "")
+            static let localDeleteError = NSLocalizedString("Alerts.localDeleteError", comment: "")
+            static let errorImageExists = NSLocalizedString("Alerts.ErrorFavoriteExists", comment: "")
+            
         }
         
         struct Home {

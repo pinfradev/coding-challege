@@ -11,8 +11,12 @@ class LocalDataManager {
     
     private let manager = CoreDataManager()
     
-    func saveLocalPhoto(photo: PhotoModel) {
-        manager.savePhoto(photo: photo)
+    func saveLocalPhoto(photo: PhotoModel,
+                        successBlock: () -> Void,
+                        errorBlock: (_ error: String?) -> Void) {
+        manager.savePhoto(photo: photo,
+                          successBlock: successBlock,
+                          errorBlock: errorBlock)
     }
     
     func getLocalPhotos() -> [PhotoModel] {
@@ -30,7 +34,11 @@ class LocalDataManager {
         return photoModelArray
     }
     
-    func deleteLocalPhotoWith(id: String) {
-        manager.deletePhoto(id: id)
+    func deleteLocalPhotoWith(id: String,
+                              successBlock: () -> Void,
+                              errorBlock: () -> Void) {
+        manager.deletePhoto(id: id,
+                            successBlock: successBlock,
+                            errorBlock: errorBlock)
     }
 }

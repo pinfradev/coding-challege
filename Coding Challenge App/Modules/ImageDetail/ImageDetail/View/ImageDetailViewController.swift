@@ -14,7 +14,7 @@ enum DetailImagePreviusVC {
     case home
 }
 
-class ImageDetailViewController: UIViewController, ImageDetailViewInput {
+class ImageDetailViewController: BaseViewController, ImageDetailViewInput {
 
     //IBOutlets
     @IBOutlet weak var imageView: UIImageView!
@@ -114,6 +114,14 @@ class ImageDetailViewController: UIViewController, ImageDetailViewInput {
         if let data = imageData, let image = UIImage(data: data) {
             self.imageView.image = image
         }
+    }
+    
+    func popViewController() {
+        self.dismissViewController()
+    }
+    
+    func showMessage(title: String = "", message: String) {
+        self.showAlert(title: title, message: message)
     }
     //MARK: IBActions
     

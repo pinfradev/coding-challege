@@ -15,10 +15,18 @@ class ImageDetailInteractor: ImageDetailInteractorInput {
     
     //MARK: ImageDetailInteractorInput
     func saveLocalPhoto(photo: PhotoModel) {
-        localDataManager.saveLocalPhoto(photo: photo)
+        localDataManager.saveLocalPhoto(photo: photo, successBlock: {
+            self.output.localSaveSucceded()
+        }, errorBlock: { error in
+            self.output.localSaveFailed(error: error)
+        })
     }
     
     func deleteLocalPhotoWith(id: String) {
-        localDataManager.deleteLocalPhotoWith(id: id)
+        localDataManager.deleteLocalPhotoWith(id: id,successBlock: {
+            self.output.localDeleteSucceded()
+        }, errorBlock: {
+            self.output.localDeleteFailed()
+        })
     }
 }
