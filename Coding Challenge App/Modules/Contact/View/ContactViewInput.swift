@@ -11,4 +11,5 @@ protocol ContactViewInput: class {
     func showMessage(title: String, message: String)
     func showLoader()
     func hideLoader()
+    func cleanFields()
 }

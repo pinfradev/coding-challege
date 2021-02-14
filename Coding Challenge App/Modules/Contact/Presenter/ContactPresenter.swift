@@ -47,6 +47,7 @@ class ContactPresenter: ContactModuleInput, ContactViewOutput, ContactInteractor
         self.view.hideLoader()
         self.view.showMessage(title: "",
                               message: Constants.Strings.Alerts.sentMessage)
+        self.view.cleanFields()
     }
     func sendMessageFailed(error: String) {
         self.view.hideLoader()

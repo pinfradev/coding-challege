@@ -14,6 +14,9 @@ target 'Coding Challenge App' do
 #validation
 pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
 
+#keyboardManager
+pod 'IQKeyboardManagerSwift', '6.5.0'
+
   target 'Coding Challenge AppTests' do
     inherit! :search_paths
     # Pods for testing

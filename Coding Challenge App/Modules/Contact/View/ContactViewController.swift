@@ -46,6 +46,10 @@ class ContactViewController: BaseViewController, ContactViewInput {
     
     @IBOutlet weak var mainButton: UIButton!{
         didSet {
+            mainButton.setTitleColor(.white, for: .normal)
+            mainButton.backgroundColor = .black
+            mainButton.layer.cornerRadius = 16.0
+            mainButton.clipsToBounds = true
             mainButton.setTitle(Constants.Strings.Contact.mainBtnTitle, for: .normal)
         }
     }
@@ -82,6 +86,13 @@ class ContactViewController: BaseViewController, ContactViewInput {
     
     func hideLoader() {
         self.hideBasicLoader()
+    }
+    
+    func cleanFields() {
+        self.nameTextField.text?.removeAll()
+        self.birthDateTextField.text?.removeAll()
+        self.emailTextField.text?.removeAll()
+        self.messageTextView.text.removeAll()
     }
     
     //MARK:- private funcs
